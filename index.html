@@ -83,6 +83,14 @@ img{max-width:100%;display:block}
 /* field rows */
 .field{display:flex;gap:.6rem;border-bottom:1px dotted rgba(42,34,24,.4);padding:.5rem 0;font-size:.95rem}
 .field b{white-space:nowrap;color:var(--ink-soft);font-weight:400;text-transform:uppercase;font-size:.78rem;letter-spacing:.12em;padding-top:.15rem}
+.field span{flex:1;min-width:0}
+/* phones: labels stack ABOVE values, like a real paper form -- the
+   no-wrap labels were squeezing the names off the card edge */
+@media (max-width: 680px){
+  .field{flex-direction:column;gap:.2rem}
+  .field b{white-space:normal}
+  .form-card{padding:1.6rem 1.3rem 2rem}
+}
 /* feature list */
 .feat{list-style:none;margin:1.2rem 0 1.6rem}
 .feat li{padding:.42rem 0 .42rem 1.9rem;position:relative}
